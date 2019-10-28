@@ -1,14 +1,14 @@
-query FindUsersQuery($name:String!, $items:Int!){
+query FindUsersQuery($name:String!, $items:Int!) {
     search(query:$name, type:USER, first: $items) {
         edges {
             cursor
             node {
-                ... on User{
+                ...on User {
+                    location
                     login
                     name
-                    bio
-                    pullRequests {
-                      totalCount
+                    repositories {
+                        totalCount
                     }
                 }
             }
