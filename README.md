@@ -14,7 +14,7 @@ Github Api - Apollo(GraphQL) - Kotlin/Java
 3. Copy the generated string.
 
 ## Config
-Please navigate to [app/build.gradle](https://github.com/julitus/GQL-github/blob/master/app/build.gradle) open and paste your Github Token. Do not delete (\"), they are necessary.
+Please navigate to [app/build.gradle](https://github.com/julitus/GQL-github/blob/master/app/build.gradle) open and paste your Github Token. Do not delete (\\\"), they are necessary.
 ```sh
 	buildTypes.each {
 	    it.buildConfigField('String', "AUTH_TOKEN", "\"toke_here\"")
