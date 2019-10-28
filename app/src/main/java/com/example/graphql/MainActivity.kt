@@ -12,7 +12,6 @@ import com.apollographql.apollo.api.Response
 import com.apollographql.apollo.exception.ApolloException
 import com.example.graphql.adapter.AdapterUser
 import kotlinx.android.synthetic.main.activity_main.*
-import kotlinx.android.synthetic.main.user_repositories.*
 import java.util.logging.Logger
 
 class MainActivity : AppCompatActivity() {
@@ -60,7 +59,10 @@ class MainActivity : AppCompatActivity() {
 
                             if (userQueryList!!.isNotEmpty()) {
                                 listUsersView = listSearchedUsers as ListView
-                                adapterUser = AdapterUser(this@MainActivity, userQueryList!!)
+                                adapterUser = AdapterUser(
+                                    this@MainActivity,
+                                    userQueryList!!
+                                )
                                 listUsersView!!.adapter = adapterUser
 
                                 listUsersView!!.onItemClickListener =

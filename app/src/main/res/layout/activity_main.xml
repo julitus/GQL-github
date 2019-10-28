@@ -13,7 +13,7 @@
         android:layout_marginStart="10dp"
         android:layout_marginTop="15dp"
         android:layout_marginEnd="10dp"
-        android:background="#e7dddd"
+        android:background="@color/bgTopColor"
         android:hint="@string/user_name"
         android:imeOptions="actionSearch"
         android:inputType="text"
