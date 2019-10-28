@@ -1,4 +1,9 @@
 <resources>
-    <string name="app_name">Github Repository Users</string>
-    <string name="user_name">User Name</string>
+    <string name="app_name">Github User Repositories</string>
+    <string name="user_name">&#128269; Search Github User Name</string>
+    <string name="users">&#10216; Users</string>
+    <string name="no_name">(no name)</string>
+    <string name="no_description">(no description)</string>
+    <string name="msg_no_repos">(does not have public repositories)</string>
+    <string name="msg_no_users">(no results found)</string>
 </resources>

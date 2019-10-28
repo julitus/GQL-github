@@ -48,7 +48,11 @@ class AdapterUser (private val context: Context, private val userQueryList: List
         val userNode = userQueryList[position].node()
 
         if (userNode is FindUsersQuery.AsUser) {
-            holder.itemNameLocation!!.text = userNode.name() + (if (userNode.location() != null ) ", " + userNode.location() else "")
+            if (userNode.name() == null) {
+                holder.itemNameLocation!!.setText(R.string.no_name)
+            } else {
+                holder.itemNameLocation!!.text = userNode.name() + (if (userNode.location() != null ) ", " + userNode.location() else "")
+            }
             holder.itemLogin!!.text = userNode.login()
             holder.itemNumRepos!!.text = "# Repos:  " + userNode.repositories().totalCount()
             holder.itemPathAvatar!!.setImageResource(R.drawable.github_avatar)

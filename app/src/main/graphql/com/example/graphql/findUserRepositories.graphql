@@ -1,0 +1,13 @@
+query FindUserRepositoriesQuery($login: String!, $items: Int!) {
+    user(login: $login) {
+        repositories(first: $items, isFork: false, orderBy: {direction: DESC, field: UPDATED_AT}) {
+            nodes {
+                name
+                description
+                pullRequests {
+                    totalCount
+                }
+            }
+        }
+    }
+}
