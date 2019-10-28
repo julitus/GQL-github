@@ -6,10 +6,6 @@ Github Api - Apollo(GraphQL) - Kotlin/Java
 - JDK 8 (Java)
 - Github token
 
-## Install
-- npm install (or)
-- yarn install
-
 ## Generate Github Token
 1. Visit [https://github.com/settings/tokens](https://github.com/settings/tokens), click in **Generate new token**, select option **repo**.
 
